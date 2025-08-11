@@ -1,0 +1,46 @@
+/* Centralized theme variables – light and dark ready */
+:root {
+  /* Brand */
+  --brand: 222 89% 60%;
+
+  /* Surfaces & text (light) */
+  --bg: 210 20% 98%;        /* app background */
+  --surface: 0 0% 100%;      /* cards, panels */
+  --text: 222 47% 11%;
+  --text-muted: 215 16% 47%;
+  --border: 214 32% 91%;
+  --input: 0 0% 100%;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05), 0 1px 1px rgba(0,0,0,0.04);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: 222 18% 12%;
+    --surface: 222 16% 16%;
+    --text: 210 40% 98%;
+    --text-muted: 215 20% 70%;
+    --border: 223 17% 28%;
+    --input: 222 16% 18%;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.35), 0 1px 1px rgba(0,0,0,0.3);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.45);
+  }
+}

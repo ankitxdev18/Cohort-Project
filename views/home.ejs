@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <!-- Theme and page styles -->
+    <link rel="stylesheet" href="/styles/theme.css">
+    <link rel="stylesheet" href="/styles/chat.css">
+</head>
+<body>
+  <div class="chat-app">
+    <!-- Sidebar (previous chats) -->
+    <aside class="sidebar" id="sidebar" aria-label="Previous chats" data-open="false">
+      <div class="sidebar__inner">
+        <div class="sidebar-header">
+          <div class="brand">Chats</div>
+          <button class="btn-icon" id="sidebar-close" aria-label="Close sidebar">✕</button>
+        </div>
+        <div class="sidebar-actions">
+          <button class="btn-ghost" id="new-chat">+ New chat</button>
+        </div>
+        <nav class="chat-list" id="chat-list">
+          <button class="chat-list__item is-active">Casual greeting exchange</button>
+        </nav>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" data-open="false"></div>
+
+    <!-- Main column -->
+    <div class="chat-main">
+      <header class="chat-header">
+        <div class="chat-header__inner">
+          <div class="chat-title">Casual greeting exchange</div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn-icon" id="sidebar-open" aria-label="Open sidebar">☰</button>
+            <button class="btn" type="button" onclick="location.href='/'">hello.</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="messages" aria-live="polite">
+        <ol class="messages__inner" id="messages">
+          <li class="message">
+            <div class="avatar">G</div>
+            <div class="bubble">
+              <p>Yo Ankur! What's poppin'? You building something dope today or just vibin'?</p>
+            </div>
+          </li>
+        </ol>
+      </main>
+
+      <footer class="composer">
+        <div class="composer__inner">
+          <form id="composer-form" class="composer-form" autocomplete="off">
+            <textarea id="composer-input" class="composer-input" name="message" rows="1" placeholder="Ask anything..." required aria-label="Message (Enter to send, Shift+Enter for newline)" data-enter-to-send="true"></textarea>
+            <button class="btn" type="submit" aria-label="Send">Send</button>
+          </form>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Page script -->
+  <script src="/scripts/chat.js" defer></script>
+</body>
+</html>

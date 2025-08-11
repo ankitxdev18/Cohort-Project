@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/styles/theme.css">
+    <link rel="stylesheet" href="/styles/auth-form.css">
+</head>
+<body>
+    <main class="auth-container">
+        <section class="card" role="region" aria-label="Registration form">
+            <header class="card-header">
+                <h1 class="title">Create your account</h1>
+                <p class="subtitle">It’s quick and easy.</p>
+            </header>
+
+            <form class="auth-form" action="/auth/register" method="post" novalidate>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input class="input" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input class="input" id="username" name="username" type="text" autocomplete="username" placeholder="yourname" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input class="input" id="password" name="password" type="password" autocomplete="new-password" placeholder="••••••••" required>
+                </div>
+
+                <div class="actions">
+                    <button class="btn primary" type="submit">Create account</button>
+                </div>
+            </form>
+
+            <footer class="card-footer">
+                <p class="muted">Already have an account? <a class="link" href="/login">Sign in</a></p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/theme.css">
+    <link rel="stylesheet" href="/styles/auth-form.css">
+</head>
+<body>
+    <main class="auth-container">
+        <section class="card" role="region" aria-label="Login form">
+            <header class="card-header">
+                <h1 class="title">Welcome back</h1>
+                <p class="subtitle">Enter your credentials to sign in.</p>
+            </header>
+
+            <form class="auth-form" action="/auth/login" method="POST" novalidate>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input class="input" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input class="input" id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+                </div>
+
+                <div class="actions">
+                    <button class="btn primary" type="submit">Sign in</button>
+                </div>
+            </form>
+
+            <footer class="card-footer">
+                <p class="muted">Don’t have an account? <a class="link" href="/register">Create one</a></p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
