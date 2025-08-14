@@ -1,8 +1,7 @@
-const userModel = require("../models/user.model")
+const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 
 async function authUser(req, res, next) {
-
     const token = req.cookies.token;
 
     if (!token) {
@@ -16,13 +15,11 @@ async function authUser(req, res, next) {
 
         req.user = user;
 
-        next()
+        next();
+    } catch (err) {
+        console.log(err);
+        res.redirect("/auth/login");
     }
-    catch (err) {
-        console.log(err)
-        res.redirect("/auth/login")
-    }
-
 }
 
 module.exports = { authUser };
