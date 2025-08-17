@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon server.js"
+    "dev": "npx nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,13 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.1",
     "socket.io": "^4.8.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitxdev18/Cohort-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ankitxdev18/Cohort-Project/issues"
+  },
+  "homepage": "https://github.com/ankitxdev18/Cohort-Project#readme"
 }
